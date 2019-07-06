@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" >
+
+    <title>User Login</title>
+    <ui:composition template="templates/template-default.xhtml">
+        <ui:define name="content">
+            <h:form>
+                <p:messages id="msg" closable="true"></p:messages>
+                <div class="box">
+                    <h2>Login here</h2>
+                    <h:panelGrid columns="2">  
+                        <h:outputLabel>Username </h:outputLabel>
+                        <p:inputText value="#{loginMB.user.username}" label="Username" required="true" requiredMessage="Username can't be empty" />
+                        <h:outputLabel>Password </h:outputLabel>
+                        <p:password value="#{loginMB.user.password}" label="Password" required="true" requiredMessage="Password can't be empty" ></p:password>
+                        <h:outputLabel value=""></h:outputLabel> 
+                        <p:commandButton action="#{loginMB.login()}" value="Login" update="msg"/>
+
+                    </h:panelGrid>
+                </div>
+            </h:form>   
+        </ui:define>
+    </ui:composition>
+</html>
+

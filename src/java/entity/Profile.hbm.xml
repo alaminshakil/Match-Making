@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 3, 2019 9:07:44 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Profile" table="profile" catalog="matchmaking" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="username" length="45" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" />
+        </property>
+        <property name="fullname" type="string">
+            <column name="fullname" length="45" not-null="true" />
+        </property>
+        <property name="age" type="int">
+            <column name="age" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="45" not-null="true" />
+        </property>
+        <property name="profession" type="string">
+            <column name="profession" length="45" not-null="true" />
+        </property>
+        <property name="fatherName" type="string">
+            <column name="father_name" length="45" not-null="true" />
+        </property>
+        <property name="fatherProfession" type="string">
+            <column name="father_profession" length="45" not-null="true" />
+        </property>
+        <property name="motherName" type="string">
+            <column name="mother_name" length="45" not-null="true" />
+        </property>
+        <property name="motherProfession" type="string">
+            <column name="mother_profession" length="145" not-null="true" />
+        </property>
+        <property name="education" type="string">
+            <column name="education" length="45" not-null="true" />
+        </property>
+        <property name="height" type="double">
+            <column name="height" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="45" not-null="true" />
+        </property>
+        <property name="about" type="string">
+            <column name="about" length="200" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

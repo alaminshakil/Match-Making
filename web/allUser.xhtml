@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>All User List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <ui:composition template="templates/template-default.xhtml">
+        <ui:define name="content">
+            <h:body>
+                <div class="box3">
+                     <h2>All Profiles</h2>
+                <p:panelGrid columns="5" class="ltable">
+                    <p:dataTable var="user" value="#{showMB.allUser}">
+                        <f:facet name="header">
+                            User List
+                        </f:facet>
+                        <p:column headerText="Username">
+                            <h:outputText value="#{user.username}" />
+                        </p:column>
+                        <p:column headerText="Name">
+                            <h:outputText value="#{user.fullname}" />
+                        </p:column>
+                        <p:column headerText="City">
+                            <h:outputText value="#{user.city}" />
+                        </p:column>
+                        <p:column headerText="Age">
+                            <h:outputText value="#{user.age}" />
+                        </p:column>
+                        <p:column headerText="Gender">
+                            <h:outputText value="#{user.gender}" />
+                        </p:column>
+                        <p:column headerText="Profession">
+                            <h:outputText value="#{user.profession}" />
+                        </p:column>
+                    </p:dataTable>
+                </p:panelGrid>
+                    </div>
+            </h:body>
+        </ui:define>
+    </ui:composition>
+</html>

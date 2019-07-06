@@ -1,0 +1,171 @@
+/*.container{
+    width: 1080px;
+    height: auto;
+margin: 0 auto;
+}
+
+.header{
+    float: left;
+    height: 100px;
+    
+    width: auto; 
+    background-color: sienna;
+    
+}
+.footer{
+    float: left;
+    height: 50px;
+    width: auto;
+    background-color: tomato    ;
+}
+
+
+.left{
+    float: left;
+    width:200px;
+    height: auto;
+    background-color: buttonface;
+
+
+}
+
+.center{
+    float: left;
+    width: 700px;
+    height: auto;
+    background-color: orangered;
+
+}*/
+
+/*.right{
+    width: 200;
+    height: auto;
+    background-color: blue;*/
+
+/* ############################ alu css ##################### */
+*,html,body{margin: 0; padding: 0;}
+.header{
+    width: 100%;
+    height: 120px;
+    float: left;
+    background-color: #761c19;
+    background-image: url('../img/bg.jpg');
+    
+    color: mediumvioletred;
+    font-size: 80px;
+    font-family: cursive;
+}
+.sidebar{
+    width: 15%;
+    height: auto;
+    float: left;
+    background-color: #c7254e;
+    border-color: #4CAF50;
+   
+
+}
+.content{
+    width: 80%;
+    float: left;
+    background-color: #ffffff;
+    background-image:url('../img/bg.jpg');
+    background-position: center;
+    height:480px;
+    margin-top: 10px;
+}
+.footer{
+    width: 100%;
+    height: 50px;
+    float: left;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #d82d00;
+    float: left;
+    height: 430px;
+    overflow: auto;
+    margin-right: 80px;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: tomato;
+    padding: 12px;
+    text-decoration: #c7254e;
+}
+
+/* Active/current link */
+.sidebar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+    background-color: maroon;
+    color: paleturquoise;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property 
+ On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+        float: none;
+    }
+}
+
+/* ############*/
+.box{
+    width: 380px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5 );
+    margin: 70px auto 0 auto;
+    font-family: cursive;
+    color: peachpuff;
+   
+}
+.box h2{
+    display: block;
+    background-color: rgba(0,0,0,0.7 );
+    text-align: center;
+    background-color: tomato;
+}
+.ltable td{
+    padding: 5px 10px;;
+    width: 100%;
+}
+
+.box3{
+    width: auto;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7 );
+    margin: 70px auto 0 auto;
+}
+
+.box3 h2{
+    display:  list-item; 
+    text-align: center;
+    background-color: tomato;
+}
+
+.sform .ui-widget{
+    background-color: rgba(0,0,0,0.7 );
+}

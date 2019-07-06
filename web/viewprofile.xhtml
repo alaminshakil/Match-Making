@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+        <title>User Profile</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:dataGrid var="profile" value="#{showMB.userInfo}" columns="2"
+                        rows="12" id="profile">
+<!--                <f:facet name="header">
+                    <h:outputText value="User information" />
+                </f:facet>-->
+                <p:panel header="My Profile">
+                    <p:panelGrid columns="2">
+                        <h:outputText value="Username"></h:outputText>
+                        <h:outputText value="#{profile.username}"></h:outputText>
+                        
+                        <h:outputText value="Full Name"></h:outputText>
+                        <h:outputText value="#{profile.fullname}"></h:outputText>
+                        
+                        <h:outputText value="Gender"></h:outputText>
+                        <h:outputText value="#{profile.gender}"></h:outputText>
+                        
+                        <h:outputText value="City"></h:outputText>
+                        <h:outputText value="#{profile.city}"></h:outputText>
+                       
+                        <h:outputText value="Age"></h:outputText>
+                        <h:outputText value="#{profile.age}"></h:outputText>
+                        
+                        <h:outputText value="Profession"></h:outputText>
+                        <h:outputText value="#{profile.profession}"></h:outputText>
+                        
+                        <h:outputText value="Age"></h:outputText>
+                        <h:outputText value="#{profile.age}"></h:outputText>
+                        
+                        <h:outputText value="Father's Name"></h:outputText>
+                        <h:outputText value="#{profile.fatherName}"></h:outputText>
+                        
+                        <h:outputText value="Father's Profession"></h:outputText>
+                        <h:outputText value="#{profile.fatherProfession}"></h:outputText>
+                    </p:panelGrid>
+                </p:panel>
+           
+                
+            </p:dataGrid>
+        </h:form>
+
+    </h:body>
+</html>
+

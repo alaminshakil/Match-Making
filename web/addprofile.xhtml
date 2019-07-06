@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Profile</title>
+    </h:head>
+    <ui:composition template="templates/template-default.xhtml">
+        <ui:define name="content">  
+            <h:body>     
+                <center>
+                    <h4 style="color: tomato">Please fill the form</h4>
+                    <h:form>
+                        <p:messages id="msg" closable="true"></p:messages>
+                        <p:panelGrid columns="2"> 
+                            <h:outputLabel >Username </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.username}"></p:inputText> 
+                            <h:outputLabel >Full Name </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.fullname}"></p:inputText> 
+                            <h:outputLabel >Age </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.age}"></p:inputText>
+                            <h:outputLabel >Height </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.height}"></p:inputText>
+                            <h:outputLabel >City </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.city}"></p:inputText>
+                            <h:outputLabel >Gender </h:outputLabel> 
+                            <p:selectOneRadio id="gender" value="#{registerMB.pf.gender}">
+                                <f:selectItem itemLabel="Male" itemValue="Male" />
+                                <f:selectItem itemLabel="Female" itemValue="Female" />
+                            </p:selectOneRadio>
+                            <h:outputLabel >Profession </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.profession}"></p:inputText>                 
+                            <h:outputLabel >Father's Name </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.fatherName}"></p:inputText> 
+                            <h:outputLabel >Father's Profession </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.fatherProfession}"></p:inputText>
+                            <h:outputLabel >Mother's Name </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.motherProfession}"></p:inputText>
+                            <h:outputLabel >Education </h:outputLabel> 
+                            <p:inputText value="#{registerMB.pf.education}"></p:inputText> 
+                            <h:outputLabel >Address </h:outputLabel>  
+                            <p:inputTextarea value="#{registerMB.pf.address}"></p:inputTextarea>
+                            <h:outputLabel >About </h:outputLabel> 
+                            <p:inputTextarea value="#{registerMB.pf.about}"></p:inputTextarea>  
+                            <h:outputLabel value="Password "></h:outputLabel> 
+                            <p:password value="#{registerMB.pf.password}"></p:password>               
+                            <h:outputLabel value=" "></h:outputLabel> 
+                            <p:commandButton value="Save" action="#{registerMB.profile()}" update="msg"></p:commandButton>
+                        </p:panelGrid>
+                    </h:form>
+                </center>
+            </h:body>
+        </ui:define>
+    </ui:composition>
+</html>
+

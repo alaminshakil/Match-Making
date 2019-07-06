@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  
+      xmlns:h="http://xmlns.jcp.org/jsf/html"  
+      xmlns:p="http://primefaces.org/ui">  
+    <h:head>  
+        <title>MatchMaking Site</title> 
+<!--       <link href="#{request.getContextPath()}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+        <link href="#{request.getContextPath()}/resources/js/jquery.js" rel="stylesheet" type="text/css" />
+        <link href="#{request.getContextPath()}/resources/css/style.css" rel="stylesheet" type="text/css" />
+    </h:head>  
+    <h:body> 
+       
+        <div class="container">
+            <div class="header">
+                <img src="#{request.getContextPath()}/resources/img/header.jpg"/>
+            </div>
+
+            <div class="left">
+
+                <h:form>
+                    <p:growl id="growl" showDetail="true" />
+                    <p:commandButton action="/registration.xhtml" value="Registration"></p:commandButton> <br/><br/>
+                    <p:commandButton action="/login.xhtml" value="Login"></p:commandButton><br/><br/>
+                    <p:commandButton action="/allUser.xhtml" value="Show Users"></p:commandButton><br/><br/>
+                    <p:commandButton action="/search.xhtml" value="Search Profile"></p:commandButton>       
+                </h:form>
+            </div>
+            <div class="center">
+                Hello.... Its center Div
+
+            </div>
+
+            <div class="footer">
+                This is footer section
+            </div>
+        </div>
+
+        <h:form class="stack">  
+            <p:stack icon="/resources/img/box.gif">  
+                <p:menuitem value="Home" icon="/resources/img/home.png" url="index.xhtml" />  
+                <p:menuitem value="Login" icon="/resources/img/login.png" url="login.xhtml" />  
+                <p:menuitem value="Registration" icon="/resources/img/reg.png" url="registration.xhtml" />  
+                <p:menuitem value="Search" icon="/resources/img/search.png" url="search.xhtml" />  
+                <p:menuitem value="Profiles" icon="/resources/img/show.png" url="allUser.xhtml"/>  
+            </p:stack>  
+        </h:form>  
+    </h:body>  
+</html>  
